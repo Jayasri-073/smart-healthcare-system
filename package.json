@@ -1,0 +1,13 @@
+{
+  "name": "smart-healthcare-system",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently -k -n backend,frontend \"npm:dev:backend\" \"npm:dev:frontend\"",
+    "dev:backend": "npm run dev --prefix backend",
+    "dev:frontend": "npm run dev --prefix frontend/frontend"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1"
+  }
+}

@@ -1,0 +1,230 @@
+:root {
+  --bs-primary: #0d9488;
+  --bs-primary-rgb: 13, 148, 136;
+  --bs-link-color: #0d9488;
+  --bs-link-color-rgb: 13, 148, 136;
+  --bs-link-hover-color: #0b7f75;
+  --bs-link-hover-color-rgb: 11, 127, 117;
+  --care-bg: #f4f8fb;
+}
+
+body {
+  background: #fff;
+  color: #1f2937;
+  font-family: 'Segoe UI', system-ui, -apple-system, Roboto, sans-serif;
+}
+
+/* Buttons in the healthcare teal colour */
+.btn-primary {
+  --bs-btn-bg: #0d9488;
+  --bs-btn-border-color: #0d9488;
+  --bs-btn-hover-bg: #0b7f75;
+  --bs-btn-hover-border-color: #0b7f75;
+  --bs-btn-active-bg: #0b7f75;
+  --bs-btn-active-border-color: #0b7f75;
+  --bs-btn-disabled-bg: #0d9488;
+  --bs-btn-disabled-border-color: #0d9488;
+}
+.btn-outline-primary {
+  --bs-btn-color: #0d9488;
+  --bs-btn-border-color: #0d9488;
+  --bs-btn-hover-bg: #0d9488;
+  --bs-btn-hover-border-color: #0d9488;
+  --bs-btn-active-bg: #0d9488;
+  --bs-btn-active-border-color: #0d9488;
+  --bs-btn-disabled-color: #0d9488;
+  --bs-btn-disabled-border-color: #0d9488;
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: #0d9488;
+  box-shadow: 0 0 0 0.2rem rgba(13, 148, 136, 0.2);
+}
+.form-check-input:checked {
+  background-color: #0d9488;
+  border-color: #0d9488;
+}
+
+/* Navbar */
+.navbar .nav-link.active {
+  color: #0d9488 !important;
+  font-weight: 600;
+}
+
+/* Cards */
+.card {
+  border: 0;
+  border-radius: 12px;
+}
+.card.shadow-sm {
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06) !important;
+}
+.doctor-card,
+.service-card {
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.doctor-card:hover,
+.service-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Landing page */
+.hero {
+  background: linear-gradient(135deg, #f0fdfa 0%, #e0f2fe 100%);
+  padding: 5rem 0;
+}
+.hero h1 {
+  font-weight: 800;
+  color: #0f3d3e;
+}
+.section {
+  padding: 4rem 0;
+}
+.section-alt {
+  background: var(--care-bg);
+}
+.icon-circle {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #ccfbf1;
+  color: #0d9488;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+}
+.step-number {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #0d9488;
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.2rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.badge-soft {
+  background: #ccfbf1;
+  color: #0f766e;
+  font-weight: 600;
+}
+
+/* Avatar */
+.avatar {
+  border-radius: 50%;
+  background: linear-gradient(135deg, #0d9488, #0ea5e9);
+  color: #fff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+}
+.avatar-img {
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Footer */
+.footer {
+  background: #0f3d3e;
+  color: #cbd5e1;
+}
+.footer a {
+  color: #cbd5e1;
+  text-decoration: none;
+}
+.footer a:hover {
+  color: #fff;
+}
+
+/* Login / Register */
+.auth-wrapper {
+  min-height: calc(100vh - 62px);
+  background: var(--care-bg);
+  display: flex;
+  align-items: center;
+  padding: 2rem 0;
+}
+
+/* Dashboard layout */
+.dashboard-wrapper {
+  display: flex;
+  min-height: calc(100vh - 62px);
+  background: var(--care-bg);
+}
+.dashboard-content {
+  flex: 1;
+  min-width: 0;
+  padding: 1.5rem;
+}
+.sidebar {
+  width: 250px;
+  flex-shrink: 0;
+  background: #fff;
+  border-right: 1px solid #e5e7eb;
+  padding: 1.25rem 0.75rem;
+}
+.sidebar .nav-link {
+  color: #374151;
+  border-radius: 8px;
+  padding: 0.6rem 0.9rem;
+  margin-bottom: 0.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+.sidebar .nav-link:hover {
+  background: #f0fdfa;
+}
+.sidebar .nav-link.active {
+  background: #0d9488;
+  color: #fff;
+}
+.sidebar-backdrop {
+  display: none;
+}
+.stat-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  flex-shrink: 0;
+}
+
+/* Mobile / tablet sidebar */
+@media (max-width: 991.98px) {
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 1050;
+    transform: translateX(-100%);
+    transition: transform 0.25s ease;
+    overflow-y: auto;
+  }
+  .sidebar.open {
+    transform: translateX(0);
+  }
+  .sidebar-backdrop {
+    display: block;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1040;
+  }
+  .hero {
+    padding: 3rem 0;
+  }
+  .dashboard-content {
+    padding: 1rem;
+  }
+}
